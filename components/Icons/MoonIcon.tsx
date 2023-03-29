@@ -1,6 +1,10 @@
 import React from "react";
 
-const MoonIcon = () => {
+interface Props {
+  className?: string;
+}
+
+const MoonIcon = (props: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +12,7 @@ const MoonIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className={`w-6 h-6 ${props.className}`}
     >
       <path
         strokeLinecap="round"
