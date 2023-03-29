@@ -1,8 +1,10 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-interface ThemeInterface {
+export type FontType = "serif" | "sans" | "mono";
+
+export interface ThemeInterface {
   isDarkTheme: boolean;
-  fontFamily: "serif" | "sans" | "mono";
+  fontFamily: FontType;
 }
 
 const defaultTheme: ThemeInterface = {

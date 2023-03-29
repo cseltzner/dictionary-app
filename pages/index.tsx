@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar/Navbar";
 import { useTheme } from "@/hooks/useTheme";
 import Head from "next/head";
 
@@ -18,7 +19,9 @@ export default function Home() {
          ${theme.fontFamily === "sans" && "font-sans"} 
          ${theme.fontFamily === "mono" && "font-mono"} 
          container mx-auto`}
-      ></main>
+      >
+        <Navbar theme={theme} setTheme={setTheme} />
+      </main>
     </>
   );
 }
