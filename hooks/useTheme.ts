@@ -37,5 +37,14 @@ export function useTheme(): [
     }
   }, []);
 
-  return [theme, setTheme];
+  // Sets theme using React state manager
+  // AND sets theme value in local storage whenever theme is updated
+  const setThemeLocalStorage: Dispatch<SetStateAction<ThemeInterface>> = (
+    value: SetStateAction<ThemeInterface>
+  ) => {
+    setTheme(value);
+    localStorage.setItem("theme", JSON.stringify(value));
+  };
+
+  return [theme, setThemeLocalStorage];
 }
