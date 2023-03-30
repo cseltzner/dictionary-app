@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar/Navbar";
+import SearchBar from "@/components/SearchBar/SearchBar";
 import { useTheme } from "@/hooks/useTheme";
 import Head from "next/head";
 
@@ -18,9 +19,10 @@ export default function Home() {
          ${theme.fontFamily === "serif" && "font-serif"} 
          ${theme.fontFamily === "sans" && "font-sans"} 
          ${theme.fontFamily === "mono" && "font-mono"} 
-         container mx-auto`}
+         container mx-auto text-neutral-800`}
       >
         <Navbar theme={theme} setTheme={setTheme} />
+        <SearchBar defaultWord="test word" onSubmit={(e) => console.log(e)} />
       </main>
     </>
   );
