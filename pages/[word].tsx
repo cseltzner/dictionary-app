@@ -17,6 +17,7 @@ const WordPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    document.title = wordQuery[0].toUpperCase() + wordQuery.slice(1); // Capitalized title
     setIsLoading(true);
     fetchWordDef(wordQuery)?.then((res) => {
       res.json().then((value) => {

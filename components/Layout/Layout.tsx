@@ -15,7 +15,7 @@ const Layout = (props: Props) => {
      ${theme.fontFamily === "serif" && "font-serif"} 
      ${theme.fontFamily === "sans" && "font-sans"} 
      ${theme.fontFamily === "mono" && "font-mono"} 
-     container max-w-6xl mx-auto text-neutral-800`}
+     container max-w-6xl mx-auto text-neutral-800 px-8 xl:px-0`}
     >
       <Navbar theme={theme} setTheme={setTheme} />
       <main>{props.children}</main>
