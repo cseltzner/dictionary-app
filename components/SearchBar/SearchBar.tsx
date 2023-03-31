@@ -3,6 +3,7 @@ import SearchIcon from "../Icons/SearchIcon";
 
 interface Props {
   defaultWord?: string;
+  placeholder?: string;
   onSubmit: (word: string) => void;
 }
 
@@ -19,7 +20,7 @@ const SearchBar = (props: Props) => {
 
   return (
     <form
-      className="relative bg-neutral-300 w-3/5 rounded-2xl font-bold"
+      className="relative bg-neutral-300 w-full md:w-3/5 rounded-2xl font-bold shadow-lg"
       onSubmit={onFormSubmit}
     >
       <button type={"submit"}>
@@ -28,10 +29,11 @@ const SearchBar = (props: Props) => {
       <input
         type={"text"}
         className={
-          "bg-neutral-300 w-full px-6 py-3 rounded-full font-bold text-lg"
+          "bg-neutral-300 w-full px-6 py-3 rounded-full font-bold text-lg placeholder:font-normal placeholder:text-neutral-500 placeholder:text-lg placeholder:invisible placeholder:md:visible"
         }
         onChange={(e) => setInputValue(e.target.value)}
         value={inputValue}
+        placeholder={props.placeholder}
       />
     </form>
   );

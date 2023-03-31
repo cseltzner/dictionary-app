@@ -1,4 +1,5 @@
 import { ThemeInterface } from "@/hooks/useTheme";
+import Link from "next/link";
 import React, { Dispatch, SetStateAction } from "react";
 import BrandIcon from "../Icons/BrandIcon";
 import MoonIcon from "../Icons/MoonIcon";
@@ -12,10 +13,10 @@ interface Props {
 
 const Navbar = (props: Props) => {
   return (
-    <nav className="flex flex-row items-center justify-center py-6 gap-2 xl:gap-0">
-      <a href="#" className="w-12 h-12">
+    <nav className="flex flex-row items-center justify-center py-8 gap-2 xl:gap-0">
+      <Link href="/" className="w-12 h-12">
         <BrandIcon className="w-full h-full transition-all hover:stroke-primary" />
-      </a>
+      </Link>
       <div className="ml-auto">
         <FontDropDown theme={props.theme} setTheme={props.setTheme} />
       </div>
