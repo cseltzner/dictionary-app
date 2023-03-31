@@ -35,7 +35,7 @@ const FontDropDown = (props: Props) => {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className={`border-2 border-primary rounded-lg transition-all text-center flex flex-col items-center ${
+          className={`border-2 border-primary bg-white rounded-lg transition-all text-center flex flex-col items-center ${
             isDropDownOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-1"

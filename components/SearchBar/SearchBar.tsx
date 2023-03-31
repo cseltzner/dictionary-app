@@ -19,15 +19,17 @@ const SearchBar = (props: Props) => {
 
   return (
     <form
-      className="relative bg-neutral-300 w-3/5 rounded-full font-bold"
+      className="relative bg-neutral-300 w-3/5 rounded-2xl font-bold"
       onSubmit={onFormSubmit}
     >
       <button type={"submit"}>
-        <SearchIcon className="absolute right-4 top-[20%] w-5 h-5 stroke-primary" />
+        <SearchIcon className="absolute right-6 top-1/4 w-5 h-5 stroke-primary" />
       </button>
       <input
         type={"text"}
-        className={"bg-neutral-300 w-full px-4 py-2 rounded-full font-bold"}
+        className={
+          "bg-neutral-300 w-full px-6 py-3 rounded-full font-bold text-lg"
+        }
         onChange={(e) => setInputValue(e.target.value)}
         value={inputValue}
       />
