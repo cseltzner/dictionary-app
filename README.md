@@ -1,6 +1,6 @@
 # Dictionary App
 
-[Dictionary App]()
+[Dictionary App](https://cseltzner.github.io/dictionary-app/)
 
 Dictionary frontend for the [Free Dictionary API](https://dictionaryapi.dev/) built in NextJS and TypeScript.
 
