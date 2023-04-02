@@ -118,7 +118,7 @@ const WordPage = () => {
                       {meaning.synonyms.map((synonym) => (
                         <Link
                           href={`/${synonym.replaceAll(" ", "")}`}
-                          className="inline-block ml-8 text-primary hover:underline"
+                          className="inline-block ml-8 text-primary dark:hover:text-purple-300 hover:underline"
                         >
                           {synonym}
                         </Link>
