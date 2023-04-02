@@ -24,7 +24,10 @@ const FontDropDown = (props: Props) => {
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setIsDropDownOpen(open)}>
-      <DropdownMenu.Trigger className="outline-none flex flex-row gap-2 items-center justify-center text-lg font-bold transition-all hover:text-primary">
+      <DropdownMenu.Trigger
+        className="flex flex-row gap-2 items-center justify-center text-lg font-bold transition-all hover:text-primary"
+        aria-label="Switch fonts"
+      >
         {getCurrentFontText()}
         <ChevronDown
           className={`w-5 h-5 stroke-primary transition-all duration-100 ${
@@ -44,7 +47,7 @@ const FontDropDown = (props: Props) => {
           <DropdownMenu.Item
             onSelect={() => setFontText("serif")}
             className={
-              "px-4 py-4 cursor-pointer outline-none transition-all hover:text-primary"
+              "px-4 py-4 w-full cursor-pointer transition-all hover:text-primary"
             }
           >
             Serif
@@ -53,7 +56,7 @@ const FontDropDown = (props: Props) => {
           <DropdownMenu.Item
             onSelect={() => setFontText("sans")}
             className={
-              "px-4 py-4 cursor-pointer outline-none transition-all hover:text-primary"
+              "px-4 py-4 w-full cursor-pointer transition-all hover:text-primary"
             }
           >
             Sans-serif
@@ -63,7 +66,7 @@ const FontDropDown = (props: Props) => {
           <DropdownMenu.Item
             onSelect={() => setFontText("mono")}
             className={
-              "px-4 py-4 cursor-pointer outline-none transition-all hover:text-primary"
+              "px-4 py-4 w-full cursor-pointertransition-all hover:text-primary"
             }
           >
             Monospace

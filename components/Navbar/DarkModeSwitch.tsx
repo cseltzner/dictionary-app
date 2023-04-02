@@ -15,7 +15,8 @@ const DarkModeSwitch = (props: Props) => {
       onCheckedChange={(checked) =>
         props.setTheme({ ...props.theme, isDarkTheme: checked })
       }
-      className={`w-12 h-6 bg-neutral-400 rounded-full relative data-[state=checked]:bg-primary outline-none ${props.className}`}
+      className={`w-12 h-6 bg-neutral-400 rounded-full relative data-[state=checked]:bg-primary ${props.className}`}
+      aria-label="Dark mode toggle"
     >
       <Switch.Thumb className="block w-[18px] h-[18px] bg-white rounded-full  transition-transform duration-100 translate-x-[3px]  data-[state=checked]:translate-x-[26px]" />
     </Switch.Root>
