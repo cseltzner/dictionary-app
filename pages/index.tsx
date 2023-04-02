@@ -21,7 +21,8 @@ export default function Home() {
         <title>Dictionary</title>
         <meta name="description" content="Open source dictionary frontend" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* Public assets must be referenced this way because github pages base URL starts at "/dictionary-app" for this app */}
+        <link rel="icon" href="/dictionary-app/favicon.ico" />
       </Head>
       <div className="pb-8">
         <Wave className="absolute -inset-48 top-28 opacity-60 -z-10" />
