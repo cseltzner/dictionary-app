@@ -53,7 +53,22 @@ const WordPage = () => {
             onSubmit={(searchWord) => onSearch(searchWord)}
             defaultWord={wordQuery}
           />
-          <p>The word {wordQuery} not found!</p>
+          <p className="pt-12 text-2xl">
+            The word{" "}
+            <span className="text-primary dark:text-purple-300 italic">
+              {wordQuery}
+            </span>{" "}
+            not found!
+          </p>
+          <p className="mt-8 text-lg">
+            Please check your spelling or try another word.
+          </p>
+          <Link
+            href="/"
+            className="inline-block mt-16 rounded-full px-8 py-3 bg-gradient-to-br from-primary  to-blue-400 text-white transition hover:opacity-90"
+          >
+            Return home
+          </Link>
         </div>
       );
     }
@@ -66,6 +81,7 @@ const WordPage = () => {
             onSubmit={(searchWord) => onSearch(searchWord)}
             defaultWord={wordQuery}
           />
+          {/* Simple and boring loading state but the API loads very fast */}
           <p>Loading...</p>
         </div>
       );
