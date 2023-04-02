@@ -29,7 +29,7 @@ export default function Home() {
           <div className="pt-10 text-center lg:text-start">
             <h1 className=" font-bold tracking-wider">
               <span className="md:text-2xl dark:text-purple-300 dark:font-normal">
-                Seltzner's Dictionary of
+                Seltzner&apos;s Dictionary of
               </span>
               <span className="block text-2xl md:text-5xl mt-3">
                 English Language & Vernacular

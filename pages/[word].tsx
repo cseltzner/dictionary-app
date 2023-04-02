@@ -102,17 +102,20 @@ const WordPage = () => {
             {wordObject.phonetics.text || wordObject.meanings[0].partOfSpeech}
           </p>
           <div>
-            {wordObject.meanings.map((meaning) => {
+            {wordObject.meanings.map((meaning, index) => {
               return (
-                <div className="[&:not(:first-child)]:mt-12">
+                <div className="[&:not(:first-child)]:mt-12" key={index}>
                   <p className="italic font-bold text-2xl mt-6">
                     {meaning.partOfSpeech}
                   </p>
                   <h3 className="mt-4 text-lg text-neutral-500">Meaning</h3>
                   <ul className="mt-8 max-w-[70ch]">
-                    {meaning.definitions.map((definition) => {
+                    {meaning.definitions.map((definition, index) => {
                       return (
-                        <li className="mt-6 ml-8 list-disc marker:text-primary">
+                        <li
+                          className="mt-6 ml-8 list-disc marker:text-primary"
+                          key={index}
+                        >
                           {definition.definition}
                           {definition.example && (
                             <p className="mt-2 ml-2">
@@ -120,7 +123,7 @@ const WordPage = () => {
                                 Example:{" "}
                               </span>
                               <span className="ml-2">
-                                "{definition.example}"
+                                &quot;{definition.example}&quot;
                               </span>
                             </p>
                           )}
@@ -131,10 +134,11 @@ const WordPage = () => {
                   {meaning.synonyms[0] && (
                     <p className="mt-16">
                       <span className="text-neutral-500">Synonyms:</span>
-                      {meaning.synonyms.map((synonym) => (
+                      {meaning.synonyms.map((synonym, index) => (
                         <Link
                           href={`/${synonym.replaceAll(" ", "")}`}
                           className="inline-block ml-8 text-primary dark:hover:text-purple-300 hover:underline"
+                          key={index}
                         >
                           {synonym}
                         </Link>
